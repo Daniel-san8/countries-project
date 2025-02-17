@@ -1,0 +1,21 @@
+.container-search {
+    margin: 2rem 1rem 0 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+
+   input {
+    border: none;
+    outline: none;
+    margin-left: 2rem;
+   }
+
+   input::placeholder {
+    color: var(--light-dark-mode-white);
+    width: 100vw;
+   }
+
+   fa-icon {
+    padding-left: 1rem;
+   }  
+  
+}
