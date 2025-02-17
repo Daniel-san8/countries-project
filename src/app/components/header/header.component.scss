@@ -1,0 +1,17 @@
+.header-common {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+
+        span {
+            padding-left: 1rem;
+        }
+    }
+
+}

@@ -8,3 +8,9 @@
     --light-mode-very-light-gray: hsl(0, 0%, 98%);
     --light-dark-mode-white: hsl(0, 0%, 100%);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
