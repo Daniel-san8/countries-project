@@ -1,9 +1,9 @@
-import { Currency } from "./currency.interface"
-import { Flags } from "./flags.interface"
-import { Language } from "./language.interface"
-import { Translations } from "./translations.interface"
+import { ICurrency } from "./currency.interface"
+import { IFlags } from "./flags.interface"
+import { ILanguage } from "./language.interface"
+import { ITranslations } from "./translations.interface"
 
-export interface Root {
+export interface IDetailsCountries {
     name: string
     topLevelDomain: string[]
     alpha2Code: string
@@ -20,10 +20,10 @@ export interface Root {
     timezones: string[]
     nativeName: string
     numericCode: string
-    flags: Flags
-    currencies: Currency[]
-    languages: Language[]
-    translations: Translations
+    flags: IFlags
+    currencies: ICurrency[]
+    languages: ILanguage[]
+    translations: ITranslations
     flag: string
     cioc: string
     independent: boolean

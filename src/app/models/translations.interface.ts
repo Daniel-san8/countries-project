@@ -1,4 +1,4 @@
-export interface Translations {
+export interface ITranslations {
     br: string
     pt: string
     nl: string
