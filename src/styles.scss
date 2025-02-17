@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url('./theme-classes/styles.scss');
 
 :root {
     --dark-mode-dark-blue: hsl(209, 23%, 22%);
@@ -14,37 +15,4 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
-}
-
-// background
-
-.bg-light {
-    background-color: var(--light-mode-very-light-gray);
-}
-
-.bg-dark {
-    background-color: var(--dark-mode-dark-blue);
-}
-
-// text-color
-
-.text-dark {
-    color: white;
-}
-
-.text-light {
-    color: black;
-}
-
-// icon
-
-
-.icon-dark fa-icon {
-    color: white;
-    background-color: transparent;
-}
-
-.icon-light fa-icon{
-    color: black;
-    background-color: transparent;
 }

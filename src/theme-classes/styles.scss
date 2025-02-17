@@ -1,0 +1,32 @@
+// background
+
+.bg-light {
+    background-color: var(--light-mode-very-light-gray);
+}
+
+.bg-dark {
+    background-color: var(--dark-mode-dark-blue);
+}
+
+// text-color
+
+.text-dark {
+    color: white;
+}
+
+.text-light {
+    color: black;
+}
+
+// icon
+
+
+.icon-dark fa-icon {
+    color: white;
+    background-color: transparent;
+}
+
+.icon-light fa-icon{
+    color: black;
+    background-color: transparent;
+}
