@@ -11,6 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
 
-  constructor (private _modeTheme: ModeThemeService) {}
+  constructor (protected readonly _modeTheme: ModeThemeService) {}
 
 }
