@@ -1,0 +1,19 @@
+.container-selected-region {
+    margin: 3rem 1rem 0 1rem;
+    padding: 1rem 1.5rem;
+    width: 200px;
+    border-radius: 6px;
+    
+    select {
+        outline: none;
+        border: none;
+        
+        width: 100%;
+
+        option {
+            padding-top: 13rem;
+        }
+    }
+    
+
+}
