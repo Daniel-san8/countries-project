@@ -5,7 +5,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
   standalone: true
 })
 export class ChangeThemeColorDirective {
-  @Input () themeDark = true;
+  @Input ({required: true}) themeDark = true;
 
   @HostBinding('class.bg-dark')
   @HostBinding('class.text-dark')

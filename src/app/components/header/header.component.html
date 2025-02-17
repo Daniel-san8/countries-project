@@ -1,4 +1,4 @@
 <header class="header-common" appChangeThemeColor [themeDark]="_modeService.darkTheme">
     <span>Onde no mundo?</span>
-    <button (click)="_modeService.toggleTheme()"><fa-icon appChangeThemeColor [icon]="faMoonIcon"></fa-icon><span appChangeThemeColor [themeDark]="_modeService.darkTheme">Dark Mode</span></button>
+    <button (click)="_modeService.toggleTheme()"><fa-icon [icon]="faMoonIcon"></fa-icon><span appChangeThemeColor [themeDark]="_modeService.darkTheme">Dark Mode</span></button>
 </header>
