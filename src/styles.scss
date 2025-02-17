@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+    --dark-mode-dark-blue: hsl(209, 23%, 22%);
+    --dark-mode-very-dark-blue: hsl(207, 26%, 17%);
+    --light-mode-very-dark-blue: hsl(200, 15%, 8%);
+    --light-mode-dark-gray: hsl(0, 0%, 52%);
+    --light-mode-very-light-gray: hsl(0, 0%, 98%);
+    --light-dark-mode-white: hsl(0, 0%, 100%);
+}
