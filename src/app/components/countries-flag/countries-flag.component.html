@@ -1,9 +1,11 @@
-<div class="container-countries-flag" appChangeThemeColor [themeDark]="_modeService.darkTheme">
-    <img [src]="listCountries?.flag" alt={{listCountries?.name}}>
-    <div class="container-details">
-        <h1>{{ listCountries?.name }}</h1>
-        <p><strong>População:</strong> {{ listCountries?.population }}</p>
-        <p><strong>Região:</strong> {{ listCountries?.region }}</p>
-        <p><strong>Capital:</strong> {{ listCountries?.capital }}</p>
+<div class="container-countries-flag" appChangeThemeColor [themeDark]="_modeService.darkTheme" *ngFor="let countrie of listCountries">
+    <div>
+        <img [src]="countrie.flag" alt={{countrie.name}}>
+        <div class="container-details">
+            <h1>{{ countrie.name }}</h1>
+            <p><strong>População:</strong> {{ countrie.population }}</p>
+            <p><strong>Região:</strong> {{ countrie.region }}</p>
+            <p><strong>Capital:</strong> {{ countrie.capital }}</p>
+        </div>
     </div>
 </div>
