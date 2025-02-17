@@ -1,0 +1,24 @@
+.container-countries-flag {
+    border-radius: 6px;
+    width: 100%;
+    img {
+        width: 100%;
+        border-radius: 6px;
+    }
+}
+
+.container-details {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}

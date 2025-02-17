@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestApiService } from '../../services/request-api.service';
 import { IDetailsCountries } from '../../models/detailsCountries.interface';
+import { ChangeThemeColorDirective } from '../../directives/change-theme-color.directive';
+import { ModeThemeService } from '../../services/mode-theme.service';
 
 @Component({
   selector: 'app-countries-flag',
   standalone: true,
-  imports: [],
+  imports: [ChangeThemeColorDirective],
   templateUrl: './countries-flag.component.html',
   styleUrl: './countries-flag.component.scss'
 })
 export class CountriesFlagComponent implements OnInit{
 
-  listCountries: IDetailsCountries[] = []
+  listCountries?: IDetailsCountries;
 
-  constructor (private _requestApi: RequestApiService) {}
+  constructor (private readonly _requestApi: RequestApiService, protected readonly _modeService: ModeThemeService) {}
 
   ngOnInit(): void {
     this._requestApi.getCountries().subscribe({
-      next: (value: any) => {
-        this.listCountries = value
-        
+      next: (value) => {
+        this.listCountries = value[0]
+        console.log(this.listCountries)
       },
       error: (err: any) => {
         console.log(err)
