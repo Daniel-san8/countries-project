@@ -7,11 +7,11 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-countries-flag',
-  standalone: true,
-  imports: [CommonModule, ChangeThemeColorDirective],
-  templateUrl: './countries-flag.component.html',
-  styleUrl: './countries-flag.component.scss'
+    selector: 'app-countries-flag',
+    standalone: true,
+    imports: [CommonModule, ChangeThemeColorDirective],
+    templateUrl: './countries-flag.component.html',
+    styleUrl: './countries-flag.component.scss'
 })
 export class CountriesFlagComponent implements OnInit{
 

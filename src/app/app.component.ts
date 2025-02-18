@@ -7,11 +7,11 @@ import { SelectedRegionComponent } from "./components/selected-region/selected-r
 import { CountriesFlagComponent } from "./components/countries-flag/countries-flag.component";
 import { ScrollPaginationDirective } from './directives/scroll-pagination.directive';
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent, SearchHomeComponent, SelectedRegionComponent, CountriesFlagComponent, ScrollPaginationDirective],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    imports: [CommonModule, HeaderComponent, SearchHomeComponent, SelectedRegionComponent, CountriesFlagComponent, ScrollPaginationDirective],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   @ViewChildren('containerCountries') containerCountries?: QueryList<ElementRef<HTMLDivElement>>;
