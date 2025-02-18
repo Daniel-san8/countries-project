@@ -71,7 +71,13 @@ export class CountriesFlagComponent implements OnInit{
       this.pagination = 10;
       this.paginationCountries();
     }
-    console.log(search)
+
+    const countrie = this.listCountries.find(countrieSelect => countrieSelect.name.toLowerCase() === search.trim().toLowerCase());
+    if(countrie) {
+      this.listPagination = [countrie];
+      this.pagination = 10;
+      this.paginationCountries();
+    }
   }
 
 }
