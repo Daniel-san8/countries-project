@@ -1,5 +1,4 @@
-import { Directive, Host, HostListener } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
   selector: '[appScrollPagination]',
@@ -7,11 +6,20 @@ import { AppComponent } from '../app.component';
 })
 export class ScrollPaginationDirective {
 
+  @Output() reachedBottom = new EventEmitter<void>(); // Evento para notificar o componente
 
-  constructor(@Host() private containerCountries: AppComponent) {}
-  @HostListener('window:scroll', ['$event']) scrollPage (event: Event) {
-    const listElements: HTMLCollection | undefined = this.containerCountries.containerCountries?.first.nativeElement.children[0].children
-    console.log(listElements?.item(listElements.length - 1))
+  @HostListener('window:scroll', ['$event'])
+  scrollPage() {
+    const listElements = document.querySelectorAll('.container-countries-flag');
+    if (listElements.length === 0) return;
+
+    const lastElement = listElements[listElements.length - 1] as HTMLDivElement;
+    if (!lastElement) return;
+
+    const positionLastElement = lastElement.getBoundingClientRect();
+
+    if (positionLastElement.bottom <= window.innerHeight) {
+      this.reachedBottom.emit(); 
+    }
   }
-
 }

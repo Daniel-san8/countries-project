@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { RequestApiService } from '../../services/request-api.service';
 import { IDetailsCountries } from '../../models/detailsCountries.interface';
 import { ChangeThemeColorDirective } from '../../directives/change-theme-color.directive';
@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './countries-flag.component.scss'
 })
 export class CountriesFlagComponent implements OnInit{
+
 
   listCountries: IDetailsCountries[] = [];
   listPagination: IDetailsCountries[] = [];
@@ -41,14 +42,13 @@ export class CountriesFlagComponent implements OnInit{
         this.pagination += 10;
         break
       }
+      if(this.listPagination.length >= this.listCountries.length) {
+        break
+      }
       this.listPagination[i] = this.listCountries[i];
+
    }
-   console.log(this.listPagination)
 
-  }
-
-  scrollPage (event: any) {
-    console.log(event)
   }
 
 }
