@@ -1,4 +1,4 @@
-<div class="container-countries-flag" appChangeThemeColor [themeDark]="_modeService.darkTheme" *ngFor="let countrie of listCountries">
+<div class="container-countries-flag" appChangeThemeColor [themeDark]="_modeService.darkTheme" *ngFor="let countrie of listPagination">
     <div>
         <img [src]="countrie.flag" alt={{countrie.name}}>
         <div class="container-details">

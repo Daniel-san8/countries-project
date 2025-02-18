@@ -5,6 +5,7 @@ import { ChangeThemeColorDirective } from '../../directives/change-theme-color.d
 import { ModeThemeService } from '../../services/mode-theme.service';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-countries-flag',
   standalone: true,
@@ -15,6 +16,9 @@ import { CommonModule } from '@angular/common';
 export class CountriesFlagComponent implements OnInit{
 
   listCountries: IDetailsCountries[] = [];
+  listPagination: IDetailsCountries[] = [];
+  pagination = 10;
+
 
   constructor (private readonly _requestApi: RequestApiService, protected readonly _modeService: ModeThemeService) {}
 
@@ -22,13 +26,29 @@ export class CountriesFlagComponent implements OnInit{
     this._requestApi.getCountries().subscribe({
       next: (value) => {
         this.listCountries = value
-        console.log(this.listCountries)
+        this.paginationCountries();
       },
       error: (err: any) => {
         console.log(err)
       }
     });
+
   }
   
+  paginationCountries () {
+   for (let i = this.listPagination.length; i < this.listCountries.length; i++) {
+      if(i === this.pagination) {
+        this.pagination += 10;
+        break
+      }
+      this.listPagination[i] = this.listCountries[i];
+   }
+   console.log(this.listPagination)
+
+  }
+
+  scrollPage (event: any) {
+    console.log(event)
+  }
 
 }
