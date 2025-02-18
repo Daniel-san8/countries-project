@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RequestApiService } from '../../services/request-api.service';
 import { IDetailsCountries } from '../../models/detailsCountries.interface';
 import { ChangeThemeColorDirective } from '../../directives/change-theme-color.directive';
@@ -24,6 +24,11 @@ export class CountriesFlagComponent implements OnInit{
   constructor (private readonly _requestApi: RequestApiService, protected readonly _modeService: ModeThemeService) {}
 
   ngOnInit(): void {
+    this.getCountries();
+  }
+
+
+  getCountries () {
     this._requestApi.getCountries().subscribe({
       next: (value) => {
         this.listCountries = value
@@ -33,10 +38,9 @@ export class CountriesFlagComponent implements OnInit{
         console.log(err)
       }
     });
-
   }
   
-  paginationCountries () {
+  paginationCountries (list?: IDetailsCountries[]) {
    for (let i = this.listPagination.length; i < this.listCountries.length; i++) {
       if(i === this.pagination) {
         this.pagination += 10;
@@ -45,10 +49,21 @@ export class CountriesFlagComponent implements OnInit{
       if(this.listPagination.length >= this.listCountries.length) {
         break
       }
-      this.listPagination[i] = this.listCountries[i];
+      if(list) {
+        this.listPagination[i] = list[i];
+      } else {
+        this.listPagination[i] = this.listCountries[i];
+      }
 
    }
+  }
 
+  changeRegionList (region: string) {
+    if(region === 'none') return this.getCountries();
+    const listRegion = this.listCountries.filter((countrie) => countrie.region === region);
+    this.pagination = 10;
+    this.listPagination = [];
+    this.paginationCountries(listRegion);
   }
 
 }

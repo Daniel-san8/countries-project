@@ -6,7 +6,7 @@ import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 })
 export class ScrollPaginationDirective {
 
-  @Output() reachedBottom = new EventEmitter<void>(); // Evento para notificar o componente
+  @Output() reachedBottom = new EventEmitter<void>();
 
   @HostListener('window:scroll', ['$event'])
   scrollPage() {

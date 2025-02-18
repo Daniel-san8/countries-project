@@ -1,8 +1,8 @@
 <div class="container-selected-region" appChangeThemeColor [themeDark]="_modeService.darkTheme">
-    <select appChangeThemeColor [themeDark]="_modeService.darkTheme">
+    <select appChangeThemeColor [themeDark]="_modeService.darkTheme" [(ngModel)]="selectValue" (ngModelChange)="updateListCountrie()">
         <option value="none" disabled="true" selected>Filtrar por região</option>
         <option value="Africa">Africa</option>
-        <option value="America">America</option>
+        <option value="Americas">America</option>
         <option value="Asia">Asia</option>
         <option value="Europe">Europa</option>
         <option value="Oceania">Oceania</option>
