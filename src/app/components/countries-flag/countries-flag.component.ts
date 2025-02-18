@@ -59,11 +59,19 @@ export class CountriesFlagComponent implements OnInit{
   }
 
   changeRegionList (region: string) {
-    if(region === 'none') return this.getCountries();
     const listRegion = this.listCountries.filter((countrie) => countrie.region === region);
     this.pagination = 10;
     this.listPagination = [];
     this.paginationCountries(listRegion);
+  }
+
+  changeSearchList (search: string) {
+    if(search.trim() === '') {
+      this.listPagination = [];
+      this.pagination = 10;
+      this.paginationCountries();
+    }
+    console.log(search)
   }
 
 }

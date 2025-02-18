@@ -1,6 +1,6 @@
 <div class="main" [ngClass]="{'bg-dark-app': _modeTheme.darkTheme}">
     <app-header />
-    <app-search-home />
+    <app-search-home (searchEmitter)="countriesFlag.changeSearchList($event)"/>
     <app-selected-region (updateListCountrieEmitter)="countriesFlag.changeRegionList($event)"/>
     <div 
         #containerCountries 
