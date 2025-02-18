@@ -59,6 +59,7 @@ export class CountriesFlagComponent implements OnInit{
   }
 
   changeRegionList (region: string) {
+    if(region === 'none') return;
     const listRegion = this.listCountries.filter((countrie) => countrie.region === region);
     this.pagination = 10;
     this.listPagination = [];
@@ -75,9 +76,6 @@ export class CountriesFlagComponent implements OnInit{
     const countrie = this.listCountries.find(countrieSelect => countrieSelect.name.toLowerCase() === search.trim().toLowerCase());
     if(countrie) {
       this.listPagination = [countrie];
-      this.pagination = 10;
-      this.paginationCountries();
-      this.resetValueRegionEmitter.emit();
     }
   }
 
