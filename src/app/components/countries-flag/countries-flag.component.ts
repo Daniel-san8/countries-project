@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RequestApiService } from '../../services/request-api.service';
 import { IDetailsCountries } from '../../models/detailsCountries.interface';
 import { ChangeThemeColorDirective } from '../../directives/change-theme-color.directive';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CountriesFlagComponent implements OnInit{
 
-
+  @Output() resetValueRegionEmitter = new EventEmitter<void>();
   listCountries: IDetailsCountries[] = [];
   listPagination: IDetailsCountries[] = [];
   pagination = 10;
@@ -77,6 +77,7 @@ export class CountriesFlagComponent implements OnInit{
       this.listPagination = [countrie];
       this.pagination = 10;
       this.paginationCountries();
+      this.resetValueRegionEmitter.emit();
     }
   }
 

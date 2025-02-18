@@ -20,4 +20,8 @@ export class SelectedRegionComponent {
   updateListCountrie () {
     this.updateListCountrieEmitter.emit(this.selectValue);
   }
+
+  resetValueSelect () {
+    this.selectValue = 'none'
+  }
 }
