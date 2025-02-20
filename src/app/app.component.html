@@ -1,12 +1,3 @@
 <div class="main" [ngClass]="{'bg-dark-app': _modeTheme.darkTheme}">
-    <app-header />
-    <app-search-home (searchEmitter)="countriesFlag.changeSearchList($event)"/>
-    <app-selected-region #selectedRegion (updateListCountrieEmitter)="countriesFlag.changeRegionList($event)"/>
-    <div 
-        #containerCountries 
-        appScrollPagination 
-        (reachedBottom)="countriesFlag.paginationCountries()"
-        class="container-countries-details">
-        <app-countries-flag #countriesFlag (resetValueRegionEmitter)="selectedRegion.resetValueSelect()"/>
-    </div>
+    <router-outlet></router-outlet>
 </div>
