@@ -9,8 +9,12 @@
     margin-left: 2rem;
    }
 
-   input::placeholder {
+   .dark::placeholder {
     color: var(--light-dark-mode-white);
+    width: 100vw;
+   }
+   .light::placeholder {
+    color: var(--dark-mode-dark-blue);
     width: 100vw;
    }
 
