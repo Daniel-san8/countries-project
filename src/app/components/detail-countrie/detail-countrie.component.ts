@@ -29,7 +29,6 @@ export class DetailCountrieComponent implements OnInit{
         this.listCountries = value
         const paramIdCountrie = this._activatedRoute.snapshot.paramMap.get('id-countrie');
         const countrieSelected = this.listCountries.find(countrie => countrie.name === paramIdCountrie);
-        console.log(countrieSelected)
         this.countrie = countrieSelected
 
       },

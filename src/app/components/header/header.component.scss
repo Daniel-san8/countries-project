@@ -24,3 +24,20 @@
 
 }
 
+@media (min-width: 1440px) {
+        .title {
+            font-size: 2rem;
+            margin-left: 2.5rem;
+        }
+
+        .header-common {
+            span {
+                margin-right: 2.5rem;
+                font-size: 1rem;
+            }
+
+            fa-icon {
+                font-size: 1rem;
+            }
+        }
+    }
