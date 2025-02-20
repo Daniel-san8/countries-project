@@ -7,11 +7,10 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RequestApiService } from '../../services/request-api.service';
 import { IDetailsCountries } from '../../models/detailsCountries.interface';
-import { ChangeThemeSecondaryDirective } from '../../directives/change-theme-secondary.directive';
 
 @Component({
   selector: 'app-detail-countrie',
-  imports: [CommonModule, ChangeThemeColorDirective, FontAwesomeModule, RouterLink, ChangeThemeColorDirective, ChangeThemeSecondaryDirective],
+  imports: [CommonModule, ChangeThemeColorDirective, FontAwesomeModule, RouterLink, ChangeThemeColorDirective],
   templateUrl: './detail-countrie.component.html',
   styleUrl: './detail-countrie.component.scss'
 })

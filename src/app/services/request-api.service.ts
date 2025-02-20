@@ -13,6 +13,6 @@ export class RequestApiService {
   constructor (private readonly _httpService: HttpClient) {}
 
   getCountries (): Observable<IDetailsCountries[]> {
-      return this._httpService.get<IDetailsCountries[]>("http://localhost:4200/assets/data.json")
+      return this._httpService.get<IDetailsCountries[]>("/assets/data.json")
   }
 }
