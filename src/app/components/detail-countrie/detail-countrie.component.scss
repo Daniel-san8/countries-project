@@ -1,5 +1,6 @@
 .container-detail-countrie {
     height: 100%;
+    width: 100%;
     padding: 1.5rem;
     button {
         border: none;
@@ -40,10 +41,21 @@
 
     div p {
         margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    div p span {
+        font-weight: 300;
     }
 }
 
 .sub-detail {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.borders {
+    display: flex;
+    flex-wrap: wrap;
+
 }
