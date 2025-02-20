@@ -1,4 +1,4 @@
-<div class="container-detail-countrie" appChangeThemeColor [themeDark]="_modeService.darkTheme">
+<div class="container-detail-countrie" [ngClass]="{'bg-dark-app': _modeService.darkTheme}">
     <button [routerLink]="['/']" appChangeThemeColor [themeDark]="_modeService.darkTheme">
         <fa-icon [icon]="iconArrowLeft"></fa-icon>
         <span>Voltar</span>

@@ -4,10 +4,11 @@ import { ChangeThemeColorDirective } from '../../directives/change-theme-color.d
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detail-countrie',
-  imports: [ChangeThemeColorDirective, FontAwesomeModule, RouterLink],
+  imports: [CommonModule, ChangeThemeColorDirective, FontAwesomeModule, RouterLink],
   templateUrl: './detail-countrie.component.html',
   styleUrl: './detail-countrie.component.scss'
 })
