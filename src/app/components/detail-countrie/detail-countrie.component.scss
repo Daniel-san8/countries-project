@@ -1,0 +1,21 @@
+.container-detail-countrie {
+    height: 100vh;
+    padding: 1.5rem;
+    button {
+        border: none;
+        outline: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), /* Sombra inferior */
+              0px -4px 10px rgba(0, 0, 0, 0.2), /* Sombra superior */
+              4px 0px 10px rgba(0, 0, 0, 0.2), /* Sombra direita */
+              -4px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 0.6rem;
+    }
+
+    fa-icon {
+        margin: 1rem;
+    }
+
+    span {
+        margin-right: 1rem;
+    }
+}

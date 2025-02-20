@@ -7,6 +7,7 @@ export const routes: Routes = [
     },
     {
         path: 'countrie-detail/:id-countrie',
-        loadComponent: () => import('./components/test/test.component').then(route => route.TestComponent)
+        loadComponent: () => import("./components/detail-countrie/detail-countrie.component").then(route => route.DetailCountrieComponent)
+
     }
 ];
