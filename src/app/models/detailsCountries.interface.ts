@@ -8,6 +8,7 @@ export interface IDetailsCountries {
     topLevelDomain: string[]
     alpha2Code: string
     alpha3Code: string
+    borders: string[]
     callingCodes: string[]
     capital: string
     altSpellings: string[]

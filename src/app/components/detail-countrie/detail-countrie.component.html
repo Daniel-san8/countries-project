@@ -4,7 +4,39 @@
         <span>Voltar</span>
     </button>
 
-    <div>
+    <div class="detail-countrie">
+        <img [src]="countrie?.flag" [alt]="countrie?.name">
+        <h1>{{ countrie?.name }}</h1>
+        <div>
+            <p>Nome Nativo: {{ countrie?.nativeName }}</p>
+            <p>População: {{ countrie?.population }}</p>
+            <p>Região: {{ countrie?.region }}</p>
+            <p>Sub Região: {{ countrie?.subregion }}</p>
+            <p>Capital: {{ countrie?.capital }}</p>
+        </div>
 
+        <div class="sub-detail">
+            <p>Domínio de Nível Superior: {{ countrie?.topLevelDomain }}</p>
+            <p>Moedas: 
+            <ng-container *ngFor="let currency of countrie?.currencies; let last = last;">
+                {{ currency.code }}<span *ngIf="!last">,</span>
+            </ng-container>
+            </p>
+            <p>Línguas: 
+                <ng-container *ngFor="let language of countrie?.languages; let last = last;">
+                    {{ language.name }}<span *ngIf="!last">,</span>
+                </ng-container>
+                
+            </p>
+        </div>
+
+        <div>
+            <p>Bordas do País: 
+                <ng-container *ngFor="let border of countrie?.borders; let last = last;">
+                    {{ border }}<span *ngIf="!last">,</span>
+                </ng-container>
+                
+            </p>
+        </div>
     </div>
 </div>

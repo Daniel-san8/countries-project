@@ -1,5 +1,5 @@
 .container-detail-countrie {
-    height: 100vh;
+    height: 100%;
     padding: 1.5rem;
     button {
         border: none;
@@ -22,4 +22,28 @@
 
 .bg-dark-app {
     background-color: var(--dark-mode-very-dark-blue);
+}
+
+
+.detail-countrie {
+
+    padding-top: 4rem;
+    
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    div p {
+        margin-bottom: 1rem;
+    }
+}
+
+.sub-detail {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
