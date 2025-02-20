@@ -1,5 +1,5 @@
 <div class="container-countries-flag" appChangeThemeColor [themeDark]="_modeService.darkTheme" *ngFor="let countrie of listPagination">
-    <div>
+    <div (click)="navigationDetails(countrie.name)">
         <img [src]="countrie.flag" alt={{countrie.name}}>
         <div class="container-details">
             <h1>{{ countrie.name }}</h1>

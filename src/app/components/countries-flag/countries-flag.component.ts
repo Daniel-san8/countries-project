@@ -4,6 +4,7 @@ import { IDetailsCountries } from '../../models/detailsCountries.interface';
 import { ChangeThemeColorDirective } from '../../directives/change-theme-color.directive';
 import { ModeThemeService } from '../../services/mode-theme.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class CountriesFlagComponent implements OnInit{
   pagination = 10;
 
 
-  constructor (private readonly _requestApi: RequestApiService, protected readonly _modeService: ModeThemeService) {}
+  constructor (private readonly _requestApi: RequestApiService, protected readonly _modeService: ModeThemeService, private readonly _router: Router) {}
 
   ngOnInit(): void {
     this.getCountries();
@@ -77,6 +78,10 @@ export class CountriesFlagComponent implements OnInit{
     if(countrie) {
       this.listPagination = [countrie];
     }
+  }
+
+  navigationDetails (countrieName: string) {
+    this._router.navigate(['countrie-detail', countrieName])
   }
 
 }
