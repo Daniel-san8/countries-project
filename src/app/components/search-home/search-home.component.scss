@@ -24,3 +24,10 @@
   
 }
 
+@media (min-width: 1440px) {
+    .container-search {
+        input {
+            width: 400px;
+        }
+    }
+}
