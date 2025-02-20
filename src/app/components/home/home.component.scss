@@ -5,3 +5,12 @@
     padding: 1.5rem;
     margin-top: 1rem;
 }
+
+
+@media (min-width: 1440px) {
+    .container-searchs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,6 +1,8 @@
 <div class="main" [ngClass]="{'bg-dark-app': _modeTheme.darkTheme}">
-    <app-search-home (searchEmitter)="countriesFlag.changeSearchList($event)"/>
-    <app-selected-region #selectedRegion (updateListCountrieEmitter)="countriesFlag.changeRegionList($event)"/>
+    <div class="container-searchs">
+        <app-search-home (searchEmitter)="countriesFlag.changeSearchList($event)"/>
+        <app-selected-region #selectedRegion (updateListCountrieEmitter)="countriesFlag.changeRegionList($event)"/>
+    </div>
     <div 
     #containerCountries 
     appScrollPagination 
