@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchHomeComponent } from '../search-home/search-home.component';
 import { SelectedRegionComponent } from '../selected-region/selected-region.component';
@@ -13,7 +13,6 @@ import { ModeThemeService } from '../../services/mode-theme.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-    @ViewChildren('containerCountries') containerCountries?: QueryList<ElementRef<HTMLDivElement>>;
   
     constructor (protected readonly _modeTheme: ModeThemeService) {}
 }

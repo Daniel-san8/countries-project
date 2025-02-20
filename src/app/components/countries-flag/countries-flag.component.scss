@@ -27,3 +27,23 @@
         font-weight: 600;
     }
 }
+
+
+.main-countries {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+    .main-countries{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+
+        div img{
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

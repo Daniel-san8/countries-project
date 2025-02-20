@@ -7,6 +7,7 @@
 }
 
 
+
 @media (min-width: 1440px) {
     .container-searchs {
         display: flex;
@@ -17,4 +18,9 @@
     .main {
         padding: 0 3rem;
     }
+
+    .container-countries-details {
+        padding: 1rem;
+    }
+
 }
