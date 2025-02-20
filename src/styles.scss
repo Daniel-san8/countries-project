@@ -5,9 +5,10 @@
     --dark-mode-dark-blue: hsl(209, 23%, 22%);
     --dark-mode-very-dark-blue: hsl(207, 26%, 17%);
     --light-mode-very-dark-blue: hsl(200, 15%, 8%);
-    --light-mode-dark-gray: hsl(0, 0%, 52%);
-    --light-mode-very-light-gray: hsl(0, 0%, 98%);
+    --light-mode-dark-gray: hsla(0, 0%, 87%, 0);
+    --light-mode-very-light-gray: hsl(0, 0%, 96%);
     --light-dark-mode-white: hsl(0, 0%, 100%);
+    --placeholder: hsl(0, 2%, 66%);
 }
 
 * {

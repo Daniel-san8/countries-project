@@ -1,4 +1,4 @@
 <div class="container-search" appChangeThemeColor [themeDark]="_modeService.darkTheme">
-    <fa-icon [icon]="iconGlass"></fa-icon>
+    <fa-icon class="icon" [icon]="iconGlass"></fa-icon>
     <input [ngClass]="{'dark': _modeService.darkTheme, 'light': !_modeService.darkTheme}" type="search" appChangeThemeColor [themeDark]="_modeService.darkTheme" placeholder="Pesquise um país..." [(ngModel)]="valueSearch" (ngModelChange)="searchEmitter.emit(valueSearch)"/>
 </div>

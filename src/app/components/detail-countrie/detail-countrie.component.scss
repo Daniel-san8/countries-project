@@ -75,7 +75,15 @@
     display: block;
 }
 
+.dark {
+    color: var(--light-dark-mode-white);
 
+}
+
+.light {
+    color: black;
+
+}
 
 @media (min-width: 1200px) {
     .container-detail-countrie {

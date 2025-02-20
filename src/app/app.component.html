@@ -1,4 +1,4 @@
-<div class="main" [ngClass]="{'bg-dark-app': _modeTheme.darkTheme}">
+<div class="main" [ngClass]="{'bg-dark-app': _modeTheme.darkTheme, 'bg-light-app': !_modeTheme.darkTheme}">
     <app-header />
     <router-outlet></router-outlet>
 </div>

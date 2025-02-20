@@ -1,8 +1,9 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import { ModeThemeService } from './services/mode-theme.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { ChangeThemeColorDirective } from './directives/change-theme-color.directive';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +13,6 @@ import { HeaderComponent } from './components/header/header.component';
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  @ViewChildren('containerCountries') containerCountries?: QueryList<ElementRef<HTMLDivElement>>;
 
   constructor (protected readonly _modeTheme: ModeThemeService) {}
 

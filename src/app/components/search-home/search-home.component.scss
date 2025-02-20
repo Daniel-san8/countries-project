@@ -11,10 +11,12 @@
 
    .dark::placeholder {
     color: var(--light-dark-mode-white);
+    font-weight: 600;
     width: 100vw;
    }
    .light::placeholder {
-    color: var(--dark-mode-dark-blue);
+    color: var(--placeholder);
+    font-weight: 600;
     width: 100vw;
    }
 
@@ -22,6 +24,18 @@
     padding-left: 1rem;
    }  
   
+}
+
+.icon-dark fa-icon{
+    color: var(--light-dark-mode-white);
+    width: 100vw;
+    font-weight: 600;
+}
+
+.icon-light fa-icon{
+    color: var(--placeholder);
+    font-weight: 600;
+    width: 100vw;
 }
 
 @media (min-width: 1220px) {

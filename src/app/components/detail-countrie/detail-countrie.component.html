@@ -4,7 +4,7 @@
         <span>Voltar</span>
     </button>
 
-    <div class="detail-countrie" appChangeThemeSecondary [themeDark]="_modeService.darkTheme">
+    <div class="detail-countrie" [ngClass]="{'dark': _modeService.darkTheme, 'light': !_modeService.darkTheme}">
         <img [src]="countrie?.flag" [alt]="countrie?.name" />
         <div>
             <div class="main-details">
@@ -34,7 +34,7 @@
                     </p>
                 </div>
             </div>
-            <p class="borders" appChangeThemeSecondary [themeDark]="_modeService.darkTheme">Bordas do País:<span> </span>
+            <p class="borders">Bordas do País:<span> </span>
                 @if (countrie?.borders) {
                         <ng-container *ngFor="let border of countrie?.borders">
                             <span class="bg-border">{{ border }}</span>
