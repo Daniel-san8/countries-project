@@ -5,42 +5,50 @@
     </button>
 
     <div class="detail-countrie" appChangeThemeSecondary [themeDark]="_modeService.darkTheme">
-        <img [src]="countrie?.flag" [alt]="countrie?.name">
-        <h1>{{ countrie?.name }}</h1>
+        <img [src]="countrie?.flag" [alt]="countrie?.name" />
         <div>
-            <p>Nome Nativo: <span>{{ countrie?.nativeName }}</span></p>
-            <p>População: <span>{{ countrie?.population }}</span></p>
-            <p>Região: <span>{{ countrie?.region }}</span></p>
-            <p>Sub Região: <span>{{ countrie?.subregion }}</span></p>
-            <p>Capital: <span>{{ countrie?.capital }}</span></p>
-        </div>
-
-        <div class="sub-detail">
-            <p>Domínio de Nível Superior: <span>{{ countrie?.topLevelDomain }}</span></p>
-            <p>Moedas: 
-            <ng-container *ngFor="let currency of countrie?.currencies; let last = last;">
-                <span>{{ currency.code }}<span *ngIf="!last">,</span></span>
-            </ng-container>
-            </p>
-            <p>Línguas: 
-                <ng-container *ngFor="let language of countrie?.languages; let last = last;">
-                    <span>{{ language.name }}<span *ngIf="!last">,</span></span>
-                </ng-container>
-                
-            </p>
-        </div>
-
-        <div>
-            <p class="borders">Bordas do País:<span> </span>
-                @if (countrie?.borders) {
-                    <ng-container *ngFor="let border of countrie?.borders; let last = last;">
-                        <span>{{ border }}<span *ngIf="!last">,</span></span>
+            <div class="main-details">
+                <div>
+                    <h1>{{ countrie?.name }}</h1>
+                    <div>
+                        <p>Nome Nativo: <span>{{ countrie?.nativeName }}</span></p>
+                        <p>População: <span>{{ countrie?.population }}</span></p>
+                        <p>Região: <span>{{ countrie?.region }}</span></p>
+                        <p>Sub Região: <span>{{ countrie?.subregion }}</span></p>
+                        <p>Capital: <span>{{ countrie?.capital }}</span></p>
+                    </div>
+                </div>
+    
+                <div class="sub-detail">
+                    <p>Domínio de Nível Superior: <span>{{ countrie?.topLevelDomain }}</span></p>
+                    <p>Moedas: 
+                    <ng-container *ngFor="let currency of countrie?.currencies; let last = last;">
+                        <span>{{ currency.code }}<span *ngIf="!last">,</span></span>
                     </ng-container>
+                    </p>
+                    <p>Línguas: 
+                        <ng-container *ngFor="let language of countrie?.languages; let last = last;">
+                            <span>{{ language.name }}<span *ngIf="!last">,</span></span>
+                        </ng-container>
+                        
+                    </p>
+                </div>
+            </div>
+            <p class="borders" appChangeThemeSecondary [themeDark]="_modeService.darkTheme">Bordas do País:<span> </span>
+                @if (countrie?.borders) {
+                        <ng-container *ngFor="let border of countrie?.borders">
+                            <span class="bg-border">{{ border }}</span>
+                        </ng-container>
                 } @else {
-                    <span>Nenhuma</span>
+                        <span>Nenhuma</span>
                 }
-                
+                    
             </p>
         </div>
+
+        
+
+        
     </div>
+    
 </div>
